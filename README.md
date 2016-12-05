@@ -4,8 +4,9 @@
 Proyecto web generado automáticamente con QuickStart Wicket.
 Para generar el proyecto es necesario tener instalado Maven. Se introduce el siguiente comando:
  
+ ``
  mvn archetype:generate -DarchetypeCatalog=http://wicket.apache.org 
-
+``
  En pantalla tendremos que elegir diferentes parámetros como IdGroup, IdArtifact, version ,...
  
 ##Compilar y generar .WAR
