@@ -169,7 +169,7 @@
                     <configuration>
                         <url>http://localhost:3030/manager/html</url>
                         <server>TomcatServer</server>
-                        <path>/var/lib/tomcat7/webapps/</path>
+                        <path>/var/lib/jenkins/workspace/HelloWorld-Wicket-Pipeline/target/</path>
                     </configuration>
                 </plugin>
 		</plugins>
