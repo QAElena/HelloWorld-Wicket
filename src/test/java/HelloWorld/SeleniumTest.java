@@ -4,16 +4,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.WebDriver;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
+import org.junit.*;
 
 public class SeleniumTest {
 
 	public static WebDriver driver;
 
-	@BeforeTest
+	@Before
 	public void setUp() {
 		try {
 			System.out.println("starting selenium web driver");
@@ -36,7 +33,7 @@ public class SeleniumTest {
 
 	}
 
-	@AfterTest
+	@After
 	public void close() {
 		try {
 			driver.close();
