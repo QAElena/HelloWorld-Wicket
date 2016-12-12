@@ -15,7 +15,8 @@ public class SeleniumTest {
 		try {
 			System.out.println("starting selenium web driver");
 			// Necesario para selenium 3 y superior
-			System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+			//System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+			System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
 			driver = new FirefoxDriver();
 
 		} catch (Exception ex) {
