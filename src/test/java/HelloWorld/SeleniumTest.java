@@ -1,8 +1,11 @@
 package HelloWorld;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
+
+import java.net.URL;
 
 import org.junit.*;
 
@@ -16,9 +19,12 @@ public class SeleniumTest {
 			System.out.println("starting selenium web driver");
 			// Necesario para selenium 3 y superior
 			//System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
-			System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
-			driver = new FirefoxDriver();
-
+		//	System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
+		
+		//	driver = new FirefoxDriver();
+			DesiredCapabilities capability = DesiredCapabilities.firefox();
+			
+			driver = new RemoteWebDriver(new URL("127.0.0.1:4444/wd/hub"), capability);
 		} catch (Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
