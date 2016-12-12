@@ -98,12 +98,14 @@
 			<version>2.0rc3</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
+    <artifactId>selenium-remote-driver</artifactId>
     <version>3.0.1</version>
 </dependency>
+
 
 
 

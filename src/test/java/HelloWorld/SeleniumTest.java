@@ -28,8 +28,8 @@ public class SeleniumTest {
 
 		driver.get("http://localhost:3030/HelloWorld/");
 
-		//Assert.assertTrue(driver.getTitle().equals("Hello World!"));
-		Assert.assertEquals(true, true);
+		Assert.assertTrue(driver.getTitle().equals("Hello World!"));
+	//	Assert.assertEquals(true, true);
 
 	}
 
