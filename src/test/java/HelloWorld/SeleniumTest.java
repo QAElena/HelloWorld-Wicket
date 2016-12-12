@@ -22,18 +22,15 @@ public class SeleniumTest {
 		//	System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
 		
 		//	driver = new FirefoxDriver();
-/*			
+			
 			DesiredCapabilities capability = DesiredCapabilities.firefox();
 			// say you use the redhat5 label to indicate RHEL5 and the amd64 label to specify the architecture
-			capability.setCapability("jenkins.label","redhat5 && amd64");
+	//		capability.setCapability("jenkins.label","redhat5 && amd64");
 			// Say you want a specific node to thread your request, just specify the node name (it must be running a selenium configuration though)
-			capability.setCapability("jenkins.nodeName","(master)");
-			driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), capability);
-	*/
-			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-			capabilities.setCapability("marionette", false);
-			capabilities.setCapability("firefox_binary","usr/bin/firefox/");
-			 driver = new FirefoxDriver(capabilities);	
+//			capability.setCapability("jenkins.nodeName","(master)");
+			driver = new RemoteWebDriver(new URL("http://127.0.0.1:4445"), capability);
+	
+			
 		} catch (Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
