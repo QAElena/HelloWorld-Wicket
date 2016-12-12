@@ -18,11 +18,11 @@ public class SeleniumTest {
 		try {
 			System.out.println("starting selenium web driver");
 			// Necesario para selenium 3 y superior
-/*			System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
 		//	System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
 		
 		//	driver = new FirefoxDriver();
-			
+/*			
 			DesiredCapabilities capability = DesiredCapabilities.firefox();
 			// say you use the redhat5 label to indicate RHEL5 and the amd64 label to specify the architecture
 			capability.setCapability("jenkins.label","redhat5 && amd64");
