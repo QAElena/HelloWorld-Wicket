@@ -24,7 +24,7 @@ public class SeleniumTest {
 		//	driver = new FirefoxDriver();
 			DesiredCapabilities capability = DesiredCapabilities.firefox();
 			
-			driver = new RemoteWebDriver(new URL("127.0.0.1:4444/wd/hub"), capability);
+			driver = new RemoteWebDriver(new URL("127.0.0.1:4444"), capability);
 		} catch (Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
