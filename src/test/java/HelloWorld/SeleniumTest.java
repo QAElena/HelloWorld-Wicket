@@ -18,7 +18,7 @@ public class SeleniumTest {
 		try {
 			System.out.println("starting selenium web driver");
 			// Necesario para selenium 3 y superior
-			System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+/*			System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
 		//	System.setProperty("webdriver.firefox.marionette","/usr/local/etc/geckodriver");
 		
 		//	driver = new FirefoxDriver();
@@ -29,6 +29,11 @@ public class SeleniumTest {
 			// Say you want a specific node to thread your request, just specify the node name (it must be running a selenium configuration though)
 			capability.setCapability("jenkins.nodeName","(master)");
 			driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), capability);
+	*/
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette", false);
+			capabilities.setCapability("firefox_binary","usr/bin/firefox/");
+			 driver = new FirefoxDriver(capabilities);	
 		} catch (Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
