@@ -12,7 +12,7 @@ import org.junit.*;
 
 public class SeleniumTest {
 
-	public static WebDriver driver;
+	//public static WebDriver driver;
 
 /*	
 	public void setUp() {
@@ -66,20 +66,20 @@ public class SeleniumTest {
 		System.out.println("TITULO!!!!:"+driver.getTitle());
 		
 		Assert.assertTrue(driver.getTitle().equals("Hello World!"));
-		
-		driver.quit();
+		driver.close();
+		//driver.quit();
 		
 	}
 	@Test
 	public  void testChrome(){
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:3030/HelloWorld/");
-		System.out.println("TITULO!!!!:"+driver.getTitle());
+		WebDriver driver2 = new ChromeDriver();
+		driver2.get("http://localhost:3030/HelloWorld/");
+		System.out.println("TITULO!!!!:"+driver2.getTitle());
 		
-		Assert.assertTrue(driver.getTitle().equals("Hello World!"));
-		
-		driver.quit();
+		Assert.assertTrue(driver2.getTitle().equals("Hello World!"));
+		driver2.close();
+		//driver.quit();
 	}
 }
