@@ -4,7 +4,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.firefox.*;
 import java.net.URL;
 
 import org.junit.*;
@@ -13,7 +13,7 @@ public class SeleniumTest {
 
 	public static WebDriver driver;
 
-	@Before
+/*	
 	public void setUp() {
 		try {
 			System.out.println("starting selenium web driver");
@@ -54,5 +54,14 @@ public class SeleniumTest {
 		} catch (Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
+	}
+	*/
+	public static void main(String[] args){
+		//System.setProperty("webdriver.gecko.driver", "C:/Users/Elena Oliván/Documents/GitHub/HelloWorld-Wicket/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+		WebDriver driver= new FirefoxDriver();
+		driver.get("http://google.com");
+		driver.quit();
+		
 	}
 }
