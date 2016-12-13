@@ -62,6 +62,7 @@ public class SeleniumTest {
 		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
 		WebDriver driver= new FirefoxDriver();
 		driver.get("http://google.com");
+		System.out.println("TITULO!!!!:"+driver.getTitle());
 		driver.quit();
 		
 	}
