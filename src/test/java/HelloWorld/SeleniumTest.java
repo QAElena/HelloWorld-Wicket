@@ -71,15 +71,14 @@ public class SeleniumTest {
 		
 	}
 	@Test
-	public  void testChrome(){
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-
-		WebDriver driver2 = new ChromeDriver();
-		driver2.get("http://localhost:3030/HelloWorld/");
-		System.out.println("TITULO!!!!:"+driver2.getTitle());
+	public  void testFirefoxFail(){
+		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
+		WebDriver driver= new FirefoxDriver();
+		driver.get("http://localhost:3030/HelloWorld/");
+		System.out.println("TITULO!!!!:"+driver.getTitle());
 		
-		Assert.assertTrue(driver2.getTitle().equals("Hello World!"));
-		driver2.close();
+		Assert.assertTrue(driver.getTitle().equals("Bye World!"));
+		driver.close();
 		//driver.quit();
 	}
 }
