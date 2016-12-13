@@ -61,8 +61,11 @@ public class SeleniumTest {
 		//System.setProperty("webdriver.gecko.driver", "C:/Users/Elena Oliván/Documents/GitHub/HelloWorld-Wicket/geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
 		WebDriver driver= new FirefoxDriver();
-		driver.get("http://google.com");
+		driver.get("http://localhost:3030/HelloWorld/");
 		System.out.println("TITULO!!!!:"+driver.getTitle());
+		
+		Assert.assertTrue(driver.getTitle().equals("Hello World!"));
+		
 		driver.quit();
 		
 	}
