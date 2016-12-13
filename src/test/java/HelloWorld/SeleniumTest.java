@@ -56,6 +56,7 @@ public class SeleniumTest {
 		}
 	}
 	*/
+	@Test
 	public static void main(String[] args){
 		//System.setProperty("webdriver.gecko.driver", "C:/Users/Elena Oliván/Documents/GitHub/HelloWorld-Wicket/geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
