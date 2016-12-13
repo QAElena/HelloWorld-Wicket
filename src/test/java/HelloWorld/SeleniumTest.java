@@ -4,6 +4,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.*;
 import java.net.URL;
 
@@ -57,7 +58,7 @@ public class SeleniumTest {
 	}
 	*/
 	@Test
-	public  void testOpen(){
+	public  void testFirefox(){
 		//System.setProperty("webdriver.gecko.driver", "C:/Users/Elena Oliván/Documents/GitHub/HelloWorld-Wicket/geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", "/usr/local/etc/geckodriver");
 		WebDriver driver= new FirefoxDriver();
@@ -68,5 +69,17 @@ public class SeleniumTest {
 		
 		driver.quit();
 		
+	}
+	@Test
+	public  void testChrome(){
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://localhost:3030/HelloWorld/");
+		System.out.println("TITULO!!!!:"+driver.getTitle());
+		
+		Assert.assertTrue(driver.getTitle().equals("Hello World!"));
+		
+		driver.quit();
 	}
 }
